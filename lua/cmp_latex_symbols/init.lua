@@ -1599,7 +1599,7 @@ local symbols = {
 local items = {}
 
 for k, v in pairs(symbols) do
-  local t = { label = k .. " " .. v, insertText = v, filterText = k }
+  local t = { word = v, label = v .. string.rep(" ", 1) .. k, insertText = v, filterText = k }
   table.insert(items, t)
 end
 
@@ -1611,7 +1611,7 @@ source.get_trigger_characters = function()
   return { "\\" }
 end
 
-source.complete = function(self, request, callback)
+source.complete = function(self, _, callback)
   if not self.items then
     self.items = items
   end
