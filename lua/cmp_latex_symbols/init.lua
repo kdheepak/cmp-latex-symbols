@@ -1611,6 +1611,10 @@ source.get_trigger_characters = function()
   return { "\\" }
 end
 
+source.get_keyword_pattern = function()
+  return [[\%(\s\|^\)\zs\\\w*]]
+end
+
 source.complete = function(self, _, callback)
   if not self.items then
     self.items = items
