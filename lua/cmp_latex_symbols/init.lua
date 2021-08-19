@@ -1593,7 +1593,7 @@ local symbols = {
   ["\\zhide"] = "⧹",
   ["\\zpipe"] = "⨠",
   ["\\zproject"] = "⨡",
-  ["\\|"] = "‖",
+  -- ["\\|"] = "‖",
 }
 
 local items = {}
@@ -1612,10 +1612,14 @@ source.get_trigger_characters = function()
 end
 
 source.get_keyword_pattern = function()
-  return [[\%(\s\|^\)\zs\\\w*]]
+  return [[\\\zs.*]]
 end
 
-source.complete = function(self, _, callback)
+source.complete = function(self, request, callback)
+  dump(request)
+  if not vim.regex(self.get_keyword_pattern() .. "$"):match_str(request.context.cursor_before_line) then
+    return callback()
+  end
   if not self.items then
     self.items = items
   end
