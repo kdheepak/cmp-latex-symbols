@@ -1616,7 +1616,6 @@ source.get_keyword_pattern = function()
 end
 
 source.complete = function(self, request, callback)
-  dump(request)
   if not vim.regex(self.get_keyword_pattern() .. "$"):match_str(request.context.cursor_before_line) then
     return callback()
   end
