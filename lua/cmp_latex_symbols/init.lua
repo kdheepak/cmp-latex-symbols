@@ -1599,7 +1599,7 @@ local symbols = {
 local items = {}
 
 for k, v in pairs(symbols) do
-  local t = { word = v, label = v .. string.rep(" ", 1) .. k, insertText = v, filterText = k }
+  local t = { word = k, label = v .. string.rep(" ", 1) .. k, insertText = v, filterText = k }
   table.insert(items, t)
 end
 
