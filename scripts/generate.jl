@@ -41,7 +41,14 @@ function unicode_list()
     for elem in _s
         add!(s, elem)
     end
-    s
+    add!(s, "\\Lbrbrak" => "〘")
+    add!(s, "\\Rbrbrak" => "〙")
+    add!(s, "\\rbrbrak" => "〕")
+    add!(s, "\\mathord" => "⍹")
+    add!(s, "\\sim" => "∼")
+    add!(s, "\\cdot" => "⋅")
+    add!(s, "\\forks" =>  "⫝̸")
+    return s
 end
 
 function luaitem(io::IO, p::Pair)
