@@ -20,4 +20,9 @@ use({
 })
 ```
 
-Based on [unimathsymbols](http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt) and Julia's REPL LaTeX completion ( [See @ExpandingMan's repo for a strict Julia compatible source](https://gitlab.com/ExpandingMan/cmp-latex/) ).
+Original based on [compe-latex-symbols](https://github.com/GoldsteinE/compe-latex-symbols/).
+
+Currently uses [unimathsymbols](http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt) and Julia's REPL LaTeX completion.
+For emoji's, you can use [this source](https://github.com/hrsh7th/cmp-emoji).
+
+[See @ExpandingMan's repo](https://gitlab.com/ExpandingMan/cmp-latex/) for a source with all and only the latex and emoji symbols defined by the Julia REPL.
