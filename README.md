@@ -20,4 +20,4 @@ use({
 })
 ```
 
-Based on [compe-latex-symbols](https://github.com/GoldsteinE/compe-latex-symbols/).
+Based on [unimathsymbols](http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt) and Julia's REPL LaTeX completion ( [See @ExpandingMan's repo for a similar source](https://gitlab.com/ExpandingMan/cmp-latex/) ).
