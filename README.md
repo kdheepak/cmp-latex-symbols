@@ -20,4 +20,4 @@ use({
 })
 ```
 
-Based on [unimathsymbols](http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt) and Julia's REPL LaTeX completion ( [See @ExpandingMan's repo for a similar source](https://gitlab.com/ExpandingMan/cmp-latex/) ).
+Based on [unimathsymbols](http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt) and Julia's REPL LaTeX completion ( [See @ExpandingMan's repo for a strict Julia compatible source](https://gitlab.com/ExpandingMan/cmp-latex/) ).
