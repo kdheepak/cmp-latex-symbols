@@ -50,7 +50,7 @@ local symbols = {
   {word="\\tcmu", label="\\tcmu µ", insertText="µ", filterText="\\tcmu"},
   {word="\\mathrm", label="\\mathrm µ", insertText="µ", filterText="\\mathrm"},
   {word="\\cdotp", label="\\cdotp ·", insertText="·", filterText="\\cdotp"},
-  {word="\\cdot", label="\\cdot ·", insertText="·", filterText="\\cdot"},
+  {word="\\cdot", label="\\cdot ⋅", insertText="⋅", filterText="\\cdot"},
   {word="\\times", label="\\times ×", insertText="×", filterText="\\times"},
   {word="\\eth", label="\\eth ð", insertText="ð", filterText="\\eth"},
   {word="\\matheth", label="\\matheth ð", insertText="ð", filterText="\\matheth"},
