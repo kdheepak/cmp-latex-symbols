@@ -15,10 +15,29 @@ use({
     { "kdheepak/cmp-latex-symbols" },
   },
   sources = {
-    { name = "latex_symbols" },
+    {
+      name = "latex_symbols",
+      option = {
+        strategy = 0, -- mixed
+      },
+    },
   },
 })
 ```
+
+## Options
+
+### `strategy`
+
+Set the display strategy.
+
+Type: number
+Default: `0 -- mixed`
+Possible values:
+
+- `0 -- mixed` Show the command and insert the symbol
+- `1 -- julia` Show and insert the symbol
+- `2 -- latex` Show and insert the command
 
 Original based on [compe-latex-symbols](https://github.com/GoldsteinE/compe-latex-symbols/).
 
