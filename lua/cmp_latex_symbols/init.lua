@@ -53,7 +53,7 @@ source.complete = function(self, request, callback)
     if not self.items then
         if option.strategy == source.strategy.julia then
             self.items = julia_items
-        elseif option.strategy == source.strategy.julia then
+        elseif option.strategy == source.strategy.latex then
             self.items = latex_items
         else
             self.items = mixed_items
