@@ -19,7 +19,7 @@ function add!(s, pair)
 end
 
 function unicode_list()
-    s = []
+    s = Pair{String, String}[]
     out = readlines(open(`curl -L http://milde.users.sourceforge.net/LUCR/Math/data/unimathsymbols.txt`))
     out = filter(x -> !startswith(x, "#"), out) # Remove comments
     out = split.(out, '^') # Split on ^
@@ -28,19 +28,21 @@ function unicode_list()
         if strip(elem[2]) == ""
             continue
         end
+        # remove U+00A0 especially before combining characters
+        symbol = strip(==(Char(0x00A0)), elem[2])
         if startswith(elem[3], "\\")
-            add!(s, elem[3] => elem[2])
+            add!(s, elem[3] => symbol)
         end
         if startswith(elem[4], "\\")
-            add!(s, elem[4] => elem[2])
+            add!(s, elem[4] => symbol)
         end
         m = match(r"= (\\\w+)", elem[end])
         if !isnothing(m)
-            add!(s, m.captures[1] => elem[2])
+            add!(s, m.captures[1] => symbol)
         end
         m = match(r"# (\\\w+)", elem[end])
         if !isnothing(m)
-            add!(s, m.captures[1] => elem[2])
+            add!(s, m.captures[1] => symbol)
         end
     end
     _s = collect(REPL.REPLCompletions.latex_symbols)
